@@ -16,3 +16,9 @@ and execute at the command line on Linux machines without Python.
 
 The `jenkins` directory contains an example of the `Jenkinsfile` (i.e. Pipeline)
 you'll be creating yourself during the tutorial.
+
+
+## Run jenkins in local with docker 
+```
+docker run -d -p 8082:8080 --name jenkins-docker --network jenkins --network-alias docker docker:dind --storage-driver overlay2 41e27c2a574b
+```
